@@ -1,0 +1,85 @@
+---
+const personalImageAlt = "Fabián Jara";
+import Badge from "../components/Badge.astro";
+
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+---
+
+<div class="max-w-xl mt-16">
+  <div class="flex gap-4 mb-8 justify-center">
+    <img
+      class="rounded-full shadow-lg size-24"
+      src="/fabian-foto.webp"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://www.linkedin.com/in/fabian-jara-6383b628b/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+
+  <div class="flex justify-center">
+    <h1 class="text-4xl font-bold tracking-tight text-white">
+      Hey, soy Fabián <span class="wave-emoji text-4xl">👋🏻</span>
+    </h1>
+  </div>
+
+  <p
+    class="text-center px-6 mt-6 text-xl [&>strong]:text-green-400 [&>strong]:font-semibold text-gray-100"
+  >
+    <strong>Ingeniero Informático Mención Desarrollo de Sistemas.</strong>
+    De Santiago de Chile 🇨🇱. Ingresando en el mundo de la creación de aplicaciones
+    únicas como desarrollador junior full stack.
+  </p>
+
+  <nav class="flex flex-wrap gap-4 mt-8 justify-center">
+    <SocialPill href="https://www.linkedin.com/in/fabian-jara-6383b628b/">
+      <LinkedInIcon class="size-6 md:size-6" />
+      LinkedIn
+    </SocialPill>
+
+    <SocialPill href="https://github.com/Fabian-Jara">
+      <GitHubIcon class="size-6 md:size-6" />
+      GitHub
+    </SocialPill>
+
+    <SocialPill href="mailto:alexisrojasfabian@gmail.com">
+      <MailIcon class="size-6 md:size-6" />
+      alexisrojasfabian@gmail.com
+    </SocialPill>
+  </nav>
+</div>
+
+<style scoped>
+  /* Definir la animación */
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  /* Aplicar la animación al emoji */
+  .wave-emoji {
+    display: inline-block;
+    animation: wave 2s infinite;
+  }
+</style>

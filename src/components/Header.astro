@@ -1,0 +1,63 @@
+---
+const navItems = [
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experiencia",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "mailto:alexisrojasfabian@gmail.com",
+  },
+];
+---
+
+<header class="fixed top-0 z-10 w-full mx-auto">
+  <nav class="px-3 py-4 text-[10pt] sm:text-xl font-medium text-gray-200">
+    <div class="sm:flex sm:justify-center">
+      <div class="flex justify-center sm:mr-10">
+        <img src="/public/logo.webp" alt="Logo Fabián" class="h-12" />
+      </div>
+
+      <div class="flex justify-center ">
+        {
+          navItems.map((link) => (
+            <a
+              class="relative md:block px-2 py-2 transition hover:text-green-400"
+              aria-label={link.label}
+              href={link.url}
+            >
+              {link.title}
+            </a>
+          ))
+        }
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-gray-800/60 ring-white/10;
+    }
+  }
+</style>

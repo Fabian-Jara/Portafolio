@@ -1,0 +1,35 @@
+<div class="top-0 bottom-0 z-[-2] min-h-screen w-full fixed inset-0 overflow-hidden scale-110">
+  <img
+    id="background"
+    src="/public/Fondo.webp"
+    alt="Fondo"
+    class="w-full h-full object-cover brightness-50"
+  />
+</div>
+
+<script >
+  const background = document.getElementById("background");
+
+  // Definir la velocidad de movimiento
+  const speedX = 0.1; // Modifica estas velocidades según lo rápido que quieras que se mueva el fondo
+  const speedY = 0.05;
+
+  // Pre calcular funciones sin y cos
+  const sinFunc = (x) => Math.sin(x);
+  const cosFunc = (x) => Math.cos(x);
+
+  // Función para mover el fondo automáticamente
+  function moveBackground() {
+    const now = performance.now();
+    const moveX = sinFunc((now * speedX) / 100) * 5;
+    const moveY = cosFunc((now * speedY) / 100) * 5;
+
+    background.style.transform = `translate(${moveX}px, ${moveY}px)`;
+  }
+
+  // Mover el fondo automáticamente inicialmente
+  moveBackground();
+
+  // Actualizar la posición del fondo en intervalos regulares
+  setInterval(moveBackground, 50); // Ajusta el intervalo de tiempo según la velocidad deseada
+</script>

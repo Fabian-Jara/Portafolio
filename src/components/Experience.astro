@@ -1,0 +1,38 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Mayo 2023 - Febrero 2024",
+    title: "Diseño y Marketing",
+    company: "The Marmol House",
+    description:
+    "Se realizaron actividades como diseño de campañas de mail marketing, mantención y re diseño a página web con WordPress, creación de herramientas básicas con Python y clasificación de datos en Excel.",
+    link: "",
+  },
+  {
+    date: "Enero 2023 - Abril 2023",
+    title: "Practica Profesional",
+    company: "Antilhue",
+    description:
+    "Desarrollo de Intranet con CRUD de gestión de recursos, utilizando MySQL y Python. Se trabajo con sistemas operativo Linux, ademas de Docker para la implementación del aplicativo web.",
+  },
+  {
+    date: "Enero 2019 - Octubre 2022",
+    title: "Ayudante Técnico en Telecomunicaciones",
+    company: "Servicios Telecomunicaciones Chile SPA",
+    description:
+    "Se realizaron tareas com la instalación de puntos de red, instalación de CCTV, instalación de controles de acceso, instalación de alarmas de humo, mantenimiento e instalación de portones automáticos",
+  },
+]
+---
+
+<ol class="relative py-4 px-4 mb-4 mt-4">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
+
