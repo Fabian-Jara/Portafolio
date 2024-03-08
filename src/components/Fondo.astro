@@ -7,24 +7,26 @@
   />
 </div>
 
-<script >
+<script>
   const background = document.getElementById("background");
 
   // Definir la velocidad de movimiento
-  const speedX = 0.1; // Modifica estas velocidades según lo rápido que quieras que se mueva el fondo
-  const speedY = 0.05;
+  const speedX: number = 0.1; // Modifica estas velocidades según lo rápido que quieras que se mueva el fondo
+  const speedY: number = 0.05;
 
   // Pre calcular funciones sin y cos
-  const sinFunc = (x) => Math.sin(x);
-  const cosFunc = (x) => Math.cos(x);
+  const sinFunc = (x: number): number => Math.sin(x);
+  const cosFunc = (x: number): number => Math.cos(x);
 
   // Función para mover el fondo automáticamente
   function moveBackground() {
-    const now = performance.now();
-    const moveX = sinFunc((now * speedX) / 100) * 5;
-    const moveY = cosFunc((now * speedY) / 100) * 5;
+    const now: number = performance.now();
+    const moveX: number = sinFunc((now * speedX) / 100) * 5;
+    const moveY: number = cosFunc((now * speedY) / 100) * 5;
 
-    background.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    if (background) { // Verificar si el elemento de fondo existe
+      background.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    }
   }
 
   // Mover el fondo automáticamente inicialmente
