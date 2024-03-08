@@ -4,6 +4,7 @@ import "@fontsource-variable/onest";
 
 import Fondo from "../components/Fondo.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 import { ViewTransitions } from "astro:transitions";
 
@@ -27,12 +28,13 @@ const { title, description } = Astro.props;
     <ViewTransitions />
   </head>
   <body>
-	<Fondo />
+    <Fondo />
 
-	<Header />
+    <Header />
 
     <slot />
 
+    <Footer />
 
     <style is:global>
       :root {
@@ -57,7 +59,7 @@ const { title, description } = Astro.props;
         min-height: 100vh;
       }
 
-	  @media (prefers-reduced-motion: reduce) {
+      @media (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
         }
