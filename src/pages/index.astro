@@ -5,9 +5,11 @@ import SectionContainer from "../components/SectionContainer.astro";
 import Hero from "../components/Hero.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
 
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
 import CodeIcon from "../components/icons/Code.astro";
+import ProfileCheckIcon from "../components/icons/ProfileCheck.astro";
 ---
 
 <Layout
@@ -26,7 +28,7 @@ import CodeIcon from "../components/icons/Code.astro";
       <h2
         class="flex items-center py-4 px-4 mb-6 text-3xl font-semibold text-white"
       >
-        <BriefcaseIcon class="size-8 mr-4" />
+        <BriefcaseIcon class="size-7 mr-4" />
         Experiencia laboral
       </h2>
       <Experience />
@@ -34,47 +36,23 @@ import CodeIcon from "../components/icons/Code.astro";
 
     <SectionContainer
       id="proyectos"
-      class="backdrop-blur-md bg-green-200/20 rounded-xl py-4 px-4"
+      class="backdrop-blur-md bg-green-200/20 rounded-xl py-4 px-4 mt-16"
     >
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-3xl text-white font-semibold mb-6 flex gap-x-3 items-center">
         <CodeIcon class="size-7" />
         Proyectos
       </h2>
       <Projects />
     </SectionContainer>
+
+    <SectionContainer id="sobre-mi" class="backdrop-blur-md bg-green-200/20 rounded-xl py-4 px-4 mt-16">
+      <h2 class="text-3xl text-white font-semibold mb-6 flex gap-x-3 items-center">
+        <ProfileCheckIcon class="size-7" />
+        Sobre mi
+      </h2>
+      <AboutMe />
+    </SectionContainer>
   </main>
 
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
+  
 </Layout>
