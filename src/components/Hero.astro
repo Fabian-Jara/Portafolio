@@ -8,7 +8,7 @@ import SocialPill from "../components/SocialPill.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 ---
 
-<div class="max-w-2xl mt-16">
+<div class="max-w-2xl sm:mt-16 mt-8">
   <div class="flex gap-4 mb-8 justify-center">
     <img
       class="rounded-full shadow-lg size-24"
@@ -32,7 +32,7 @@ import GitHubIcon from "../components/icons/GitHub.astro";
   </div>
 
   <p
-    class="text-center px-6 mt-6 text-xl [&>strong]:text-green-600 dark:[&>strong]:text-green-400 [&>strong]:font-semibold text-gray-900 dark:text-gray-100"
+    class="text-center px-6 mt-6 sm:text-xl text-md [&>strong]:text-green-600 dark:[&>strong]:text-green-400 [&>strong]:font-semibold text-gray-900 dark:text-gray-100"
   >
     <strong>Ingeniero Informático Mención Desarrollo de Sistemas.</strong>
     De Santiago de Chile 🇨🇱. Ingresando en el mundo de la creación de aplicaciones
@@ -41,17 +41,17 @@ import GitHubIcon from "../components/icons/GitHub.astro";
 
   <nav class="flex flex-wrap gap-4 mt-8 justify-center">
     <SocialPill href="https://www.linkedin.com/in/fabian-jara-6383b628b/">
-      <LinkedInIcon class="size-6 md:size-6" />
+      <LinkedInIcon class="size-6" />
       LinkedIn
     </SocialPill>
 
     <SocialPill href="https://github.com/Fabian-Jara">
-      <GitHubIcon class="size-6 md:size-6" />
+      <GitHubIcon class="size-6" />
       GitHub
     </SocialPill>
 
     <SocialPill href="mailto:alexisrojasfabian@gmail.com">
-      <MailIcon class="size-6 md:size-6" />
+      <MailIcon class="size-6" />
       alexisrojasfabian@gmail.com
     </SocialPill>
   </nav>
