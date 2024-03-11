@@ -23,12 +23,12 @@ import ProfileCheckIcon from "../components/icons/ProfileCheck.astro";
 
     <SectionContainer
       id="experiencia"
-      class="rounded-xl backdrop-blur-sm bg-green-200/20 sm:mt-52 mt-28"
+      class="sm:mt-52 mt-28"
     >
       <h2
-        class="flex items-center py-4 px-4 mb-6 text-3xl font-semibold text-white"
+        class="flex items-center py-4 px-4 mb-6 sm:text-4xl font-semibold text-gray-900 dark:text-white"
       >
-        <BriefcaseIcon class="size-7 mr-4" />
+        <BriefcaseIcon class="size-8 mr-4" />
         Experiencia laboral
       </h2>
       <Experience />
@@ -36,19 +36,19 @@ import ProfileCheckIcon from "../components/icons/ProfileCheck.astro";
 
     <SectionContainer
       id="proyectos"
-      class="backdrop-blur-md bg-green-200/20 rounded-xl py-4 px-4 mt-16"
+      class="py-4 px-4 mt-16"
     >
-      <h2 class="text-3xl text-white font-semibold mb-6 flex gap-x-3 items-center">
-        <CodeIcon class="size-7" />
+      <h2 class="sm:text-4xl dark:text-white text-gray-900 font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-8" />
         Proyectos
       </h2>
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="sobre-mi" class="backdrop-blur-md bg-green-200/20 rounded-xl py-4 px-4 mt-16">
-      <h2 class="text-3xl text-white font-semibold mb-6 flex gap-x-3 items-center">
-        <ProfileCheckIcon class="size-7" />
-        Sobre mi
+    <SectionContainer id="sobre-mi" class="py-4 px-4 mt-16">
+      <h2 class="sm:text-4xl text-gray-900 dark:text-white font-semibold mb-6 flex gap-x-3 items-center">
+        <ProfileCheckIcon class="size-8" />
+        Sobre mí
       </h2>
       <AboutMe />
     </SectionContainer>

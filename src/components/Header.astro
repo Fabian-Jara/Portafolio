@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from "./ThemeToggle.astro";
+
 const navItems = [
   {
     title: "Experiencia",
@@ -24,17 +26,18 @@ const navItems = [
 ---
 
 <header class="fixed top-0 z-10 w-full mx-auto">
-  <nav class="px-3 py-4 text-[10pt] sm:text-xl font-medium text-gray-200">
+  <nav class="px-3 py-4 text-[10pt] sm:text-xl font-medium text-gray-900 dark:text-gray-200">
     <div class="sm:flex sm:justify-center">
       <div class="flex justify-center sm:mr-10">
-        <img src="/logo-fabian.webp" alt="Logo Fabián" class="h-12" />
+        <img src="/logo-fabian1.webp" alt="Logo Fabián light" class="h-12 dark:hidden" />
+        <img src="/logo-fabian.webp" alt="Logo Fabián Drak" class="h-12 hidden dark:inline-block" />
       </div>
 
-      <div class="flex justify-center ">
+      <div class="flex justify-center items-center">
         {
           navItems.map((link) => (
             <a
-              class="relative md:block px-2 py-2 transition hover:text-green-400"
+              class="relative px-2 py-2 transition hover:text-green-600 dark:hover:text-green-400"
               aria-label={link.label}
               href={link.url}
             >
@@ -42,8 +45,8 @@ const navItems = [
             </a>
           ))
         }
+        <ThemeToggle />
       </div>
-
     </div>
   </nav>
 </header>
@@ -57,7 +60,7 @@ const navItems = [
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur bg-gray-800/60 ring-white/10;
+      @apply shadow-lg ring-1 backdrop-blur-sm bg-gray-200/50 ring-white/10;
     }
   }
 </style>
